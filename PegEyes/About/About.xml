@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Peg Eyes</name>
+  <author>Johtull</author>
+  <url>https://github.com/robertbrestle/rimworld_pegeyes</url>
+  <packageId>johtull.pegeyes</packageId>
+  <supportedVersions>
+	<li>1.0</li>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
+  <description>Complete your peg villagers with this hot prosthetic!
+  
+  Note: for animal surgeries, you will have to allow the use of regular medicine.
+  </description>
+</ModMetaData>

@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<RecipeDef Name="SurgeryInstallSilverPartBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Medicine>4</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Silver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+	<RecipeDef Name="SurgeryInstallGoldenPartBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <workAmount>2500</workAmount>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>PegEye</defName>
     <label>peg eye</label>
@@ -11,6 +55,32 @@
       <partEfficiency>0.05</partEfficiency>
     </addedPartProps>
     <spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>PegEyeSilver</defName>
+    <label>silver peg eye</label>
+    <labelNoun>a silver peg eye</labelNoun>
+    <description>An installed silver peg eye.</description>
+    <priceImpact>false</priceImpact>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.05</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>Silver</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>PegEyeGolden</defName>
+    <label>golden peg eye</label>
+    <labelNoun>a golden peg eye</labelNoun>
+    <description>An installed golden peg eye.</description>
+    <priceImpact>false</priceImpact>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.05</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>Gold</spawnThingOnRemoved>
   </HediffDef>
 
   <RecipeDef ParentName="SurgeryInstallWoodenPartBase">
@@ -26,6 +96,162 @@
       <li>Eye</li>
     </appliedOnFixedBodyParts>
     <addsHediff>PegEye</addsHediff>
+	<recipeUsers>
+		<li>Alpaca</li>
+		<li>Alphabeaver</li>
+		<li>Bear_Grizzly</li>
+		<li>Bear_Polar</li>
+		<li>Bison</li>
+		<li>Boomalope</li>
+		<li>Boomrat</li>
+		<li>Capybara</li>
+		<li>Caribou</li>
+		<li>Cassowary</li>
+		<li>Cat</li>
+		<li>Chicken</li>
+		<li>Chinchilla</li>
+		<li>Cobra</li>
+		<li>Cougar</li>
+		<li>Cow</li>
+		<li>Deer</li>
+		<li>Donkey</li>
+		<li>Dromedary</li>
+		<li>Duck</li>
+		<li>Elephant</li>
+		<li>Elk</li>
+		<li>Emu</li>
+		<li>Fox_Arctic</li>
+		<li>Fox_Fennec</li>
+		<li>Fox_Red</li>
+		<li>Gazelle</li>
+		<li>Goat</li>
+		<li>Goose</li>
+		<li>GuineaPig</li>
+		<li>Hare</li>
+		<li>Horse</li>
+		<li>Human</li>
+		<li>Husky</li>
+		<li>Ibex</li>
+		<li>Iguana</li>
+		<li>LabradorRetriever</li>
+		<li>Lynx</li>
+		<li>Megascarab</li>
+		<li>Megasloth</li>
+		<li>Megaspider</li>
+		<li>Monkey</li>
+		<li>Muffalo</li>
+		<li>Ostrich</li>
+		<li>Panther</li>
+		<li>Pig</li>
+		<li>Raccoon</li>
+		<li>Rat</li>
+		<li>Rhinoceros</li>
+		<li>Sheep</li>
+		<li>Snowhare</li>
+		<li>Squirrel</li>
+		<li>Thrumbo</li>
+		<li>Tortoise</li>
+		<li>Turkey</li>
+		<li>Warg</li>
+		<li>WildBoar</li>
+		<li>Wolf_Arctic</li>
+		<li>Wolf_Timber</li>
+		<li>Yak</li>
+		<li>YorkshireTerrier</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryInstallSilverPartBase">
+    <defName>InstallPegEyeSilver</defName>
+    <label>install silver peg eye</label>
+    <description>Install a silver peg eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Silver</ThingDef>
+      <HediffDef>PegEyeSilver</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing silver peg eye.</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PegEyeSilver</addsHediff>
+	<recipeUsers>
+		<li>Alpaca</li>
+		<li>Alphabeaver</li>
+		<li>Bear_Grizzly</li>
+		<li>Bear_Polar</li>
+		<li>Bison</li>
+		<li>Boomalope</li>
+		<li>Boomrat</li>
+		<li>Capybara</li>
+		<li>Caribou</li>
+		<li>Cassowary</li>
+		<li>Cat</li>
+		<li>Chicken</li>
+		<li>Chinchilla</li>
+		<li>Cobra</li>
+		<li>Cougar</li>
+		<li>Cow</li>
+		<li>Deer</li>
+		<li>Donkey</li>
+		<li>Dromedary</li>
+		<li>Duck</li>
+		<li>Elephant</li>
+		<li>Elk</li>
+		<li>Emu</li>
+		<li>Fox_Arctic</li>
+		<li>Fox_Fennec</li>
+		<li>Fox_Red</li>
+		<li>Gazelle</li>
+		<li>Goat</li>
+		<li>Goose</li>
+		<li>GuineaPig</li>
+		<li>Hare</li>
+		<li>Horse</li>
+		<li>Human</li>
+		<li>Husky</li>
+		<li>Ibex</li>
+		<li>Iguana</li>
+		<li>LabradorRetriever</li>
+		<li>Lynx</li>
+		<li>Megascarab</li>
+		<li>Megasloth</li>
+		<li>Megaspider</li>
+		<li>Monkey</li>
+		<li>Muffalo</li>
+		<li>Ostrich</li>
+		<li>Panther</li>
+		<li>Pig</li>
+		<li>Raccoon</li>
+		<li>Rat</li>
+		<li>Rhinoceros</li>
+		<li>Sheep</li>
+		<li>Snowhare</li>
+		<li>Squirrel</li>
+		<li>Thrumbo</li>
+		<li>Tortoise</li>
+		<li>Turkey</li>
+		<li>Warg</li>
+		<li>WildBoar</li>
+		<li>Wolf_Arctic</li>
+		<li>Wolf_Timber</li>
+		<li>Yak</li>
+		<li>YorkshireTerrier</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryInstallGoldenPartBase">
+    <defName>InstallPegEyeGolden</defName>
+    <label>install golden peg eye</label>
+    <description>Install a golden peg eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Gold</ThingDef>
+      <HediffDef>PegEyeGolden</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing golden peg eye.</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PegEyeGolden</addsHediff>
 	<recipeUsers>
 		<li>Alpaca</li>
 		<li>Alphabeaver</li>
